@@ -7,6 +7,7 @@ $(document).ready(function () {
 	var imgAnimateURL = '';
 	var imgStillURL = '';
 	var image = '';
+	var fig = $("<figure>");
 
 	// Display buttons at the top of the page
 	function showButtons() {
@@ -49,9 +50,10 @@ $(document).ready(function () {
 				image.attr("data-animate", imgAnimateURL);
 				image.attr("data-state", "still");
 				rating = response.data[i].rating;
-				pRating = $("<p>").text("Rating: " + rating);
-				$("#gifArea").append(image);
-				$("#gifs").append(pRating);
+				pRating = $("<figcaption>").text("Rating: " + rating);
+				$("#gifArea").append(fig);
+				$(fig).append(image);
+				$(fig).append(pRating);
 			}
 
 		});
@@ -78,6 +80,19 @@ $(document).ready(function () {
 
 	// Click listener on each gif to pause or unpause
 	$(document).on("click", ".gifs", gifClick);
+
+	// Add a video game button
+	$("#add-game").on("click", function (event) {
+		event.preventDefault();
+		// This line grabs the input from the textbox
+		var game = $("#gif-input").val().trim();
+
+		// Adding game from the textbox to my array
+		topics.push(game);
+
+		// Calling showButtons which handles the processing of my topics array
+		showButtons();
+	});
 
 
 
