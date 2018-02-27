@@ -1,0 +1,76 @@
+body {
+	font-family: 'VT323', monospace;
+	background-color: rgb(9, 14, 5);
+}
+
+.coolBorder {
+	color: lawngreen;
+  background-color: #000;
+	border: 2px solid lawngreen;
+	border-radius: 5px;
+	margin: 10px;
+}
+
+.buffer {
+	margin: 3px;
+}
+
+/* Adding my own button style */
+.btn-kelly {
+  color: lawngreen;
+  background-color: #000;
+	border-color: lawngreen;
+	margin: 5px;
+}
+.btn-kelly:focus,
+.btn-kelly.focus {
+  color: lawngreen;
+  background-color: #449d44;
+  border-color: #255625;
+}
+.btn-kelly:hover {
+  color: lawngreen;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.btn-kelly:active,
+.btn-kelly.active,
+.open > .dropdown-toggle.btn-kelly {
+  color: lawngreen;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.btn-kelly:active:hover,
+.btn-kelly.active:hover,
+.open > .dropdown-toggle.btn-kelly:hover,
+.btn-kelly:active:focus,
+.btn-kelly.active:focus,
+.open > .dropdown-toggle.btn-kelly:focus,
+.btn-kelly:active.focus,
+.btn-kelly.active.focus,
+.open > .dropdown-toggle.btn-kelly.focus {
+  color: lawngreen;
+  background-color: #398439;
+  border-color: #255625;
+}
+.btn-kelly:active,
+.btn-kelly.active,
+.open > .dropdown-toggle.btn-kelly {
+  background-image: none;
+}
+.btn-kelly.disabled:hover,
+.btn-kelly[disabled]:hover,
+fieldset[disabled] .btn-kelly:hover,
+.btn-kelly.disabled:focus,
+.btn-kelly[disabled]:focus,
+fieldset[disabled] .btn-kelly:focus,
+.btn-kelly.disabled.focus,
+.btn-kelly[disabled].focus,
+fieldset[disabled] .btn-kelly.focus {
+  background-color: #000;
+  border-color: lawngreen;
+}
+.btn-kelly .badge {
+  color: #000;
+  background-color: lawngreen;
+}
