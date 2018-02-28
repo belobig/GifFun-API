@@ -86,12 +86,16 @@ $(document).ready(function () {
 		event.preventDefault();
 		// This line grabs the input from the textbox
 		var game = $("#gif-input").val().trim();
+		if (game === '' || game === ' ') {
+			alert("Please enter the name of a video game");
+		} else {
+			// Adding game from the textbox to my array
+			topics.push(game);
 
-		// Adding game from the textbox to my array
-		topics.push(game);
+			// Calling showButtons which handles the processing of my topics array
+			showButtons();
+		}
 
-		// Calling showButtons which handles the processing of my topics array
-		showButtons();
 	});
 
 
