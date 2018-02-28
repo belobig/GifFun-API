@@ -8,11 +8,15 @@ body {
   background-color: #000;
 	border: 2px solid lawngreen;
 	border-radius: 5px;
-	margin: 10px;
+	margin: 10px 0;
 }
 
 .buffer {
 	margin: 3px;
+}
+
+figure {
+	display:inline-block;
 }
 
 /* Adding my own button style */

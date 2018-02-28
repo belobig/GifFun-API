@@ -7,7 +7,7 @@ $(document).ready(function () {
 	var imgAnimateURL = '';
 	var imgStillURL = '';
 	var image = '';
-	var fig = $("<figure>");
+	var fig = '';
 
 	// Display buttons at the top of the page
 	function showButtons() {
@@ -44,15 +44,15 @@ $(document).ready(function () {
 			for (let i = 0; i < response.data.length; i++) {
 				imgStillURL = response.data[i].images.fixed_width_still.url;
 				imgAnimateURL = response.data[i].images.fixed_width.url;
+				rating = response.data[i].rating;
+				pRating = $("<figcaption>").text("Rating: " + rating);
 				image = $("<img>").attr("src", imgStillURL);
 				image.addClass("img-rounded buffer gifs");
 				image.attr("data-still", imgStillURL);
 				image.attr("data-animate", imgAnimateURL);
 				image.attr("data-state", "still");
-				rating = response.data[i].rating;
-				pRating = $("<figcaption>").text("Rating: " + rating);
+				fig = $("<figure>").html(image);
 				$("#gifArea").append(fig);
-				$(fig).append(image);
 				$(fig).append(pRating);
 			}
 
